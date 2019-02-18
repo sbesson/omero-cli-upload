@@ -52,6 +52,7 @@ class UploadControl(BaseControl):
 
     def _configure(self, parser):
         parser.add_argument("file", nargs="+")
+        parser.add_argument("--test", help="Test precedence")
         parser.set_defaults(func=self.upload)
         parser.add_login_arguments()
 
